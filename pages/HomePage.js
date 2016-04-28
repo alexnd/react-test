@@ -1,9 +1,12 @@
+import React, {Component} from 'react';
+import PokemonsList from '../components/PokemonsList';
+
 class HomePage extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<h2>Home page</h2>
+			<div className="container">
+				<PokemonsList paramPage={0}/>
 			</div>
 		);
 	}

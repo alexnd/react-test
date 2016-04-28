@@ -10,3 +10,4 @@ requireImgs.keys().forEach(requireImgs);
 
 // Setup App
 ReactDOM.render(<Routes history={ history }/>, document.getElementById('root'));
+

@@ -1,4 +1,4 @@
 /node_modules
 /static
-
+/.idea
 .DS_Store

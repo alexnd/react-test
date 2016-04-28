@@ -8,7 +8,7 @@ class Layout extends React.Component {
 
 		return (
 			<div className="page-content">
-				<h1>Layout</h1>
+				<h1>Pokedex</h1>
 				<hr/>
 				<div className="content">
 					{ this.props.children }
