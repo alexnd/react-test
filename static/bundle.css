@@ -58,7 +58,7 @@ button {
 .pokemon-img {
   width: 120px;
   height: 120px;
-  background: url("../react-test/static/bg-empty.png") no-repeat; }
+  background: url("/react-test/static/bg-empty.png") no-repeat; }
 
 .pokemon-name {
   padding: 10px;
