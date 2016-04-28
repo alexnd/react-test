@@ -8,7 +8,7 @@ body {
 h1 {
   text-align: center; }
 
-button {
+.button {
   border: 1px solid #999;
   border-radius: 6px;
   background-color: #0b97c4;
@@ -18,37 +18,51 @@ button {
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
-  cursor: hand; }
+  cursor: pointer; }
+
+.button-disabled {
+  border: 1px solid #999;
+  border-radius: 6px;
+  background-color: #b1c4c3;
+  padding: 8px 40px 8px 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  background-image: url(/react-test/static/preloader.gif?6b60ee955088880b4eef6a7ae5c8a9e1);
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 .container {
   width: 480px;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  background-color: #ffffff;
+  padding-bottom: 10px; }
 
 .leftpane {
   float: left;
-  width: 500px;
-  background: #9c9; }
+  width: 480px; }
 
 .rightpane {
   float: right;
-  width: 250px;
-  background: #c9c; }
+  width: 300px; }
 
 .container2 {
-  width: 750px;
+  width: 780px;
   margin: 0 auto;
-  background: #99c; }
+  overflow: hidden;
+  background-color: #ffffff; }
 
 .pokedex {
   padding: 5px;
   margin-bottom: 15px;
-  width: 400px;
-  background-color: #ffffff; }
+  width: 470px; }
 
 .pokemon-list-node {
   display: inline-block;
-  width: 100px;
+  width: 130px;
   padding: 5px;
   margin: 5px;
   border: 1px solid black;
@@ -58,7 +72,12 @@ button {
 .pokemon-img {
   width: 120px;
   height: 120px;
-  background: url("/react-test/static/bg-empty.png") no-repeat; }
+  margin: 0 auto; }
+
+.pokemon-no-img {
+  background-image: url(/react-test/static/bg-empty.png?b2138e4cbb8b082c0b0563feb33d7bfe);
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 .pokemon-name {
   padding: 10px;
@@ -126,7 +145,7 @@ button {
   background-color: #2bdf43; }
 
 .pokemon-type-electric {
-  border-color: #dfc475;
+  border-color: #a53708;
   background-color: #ffedb9; }
 
 .pokemon-type-ice {
@@ -159,9 +178,20 @@ button {
 
 .pokemon-props {
   border-top: 1px solid #000;
-  border-left: 1px solid #000; }
+  border-left: 1px solid #000;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 .pokemon-props td {
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
-  padding: 5px; }
+  padding: 5px;
+  margin: 0;
+  font-size: 12px; }
+
+.pokemon-props-col1 {
+  width: 150px; }
+
+.pokemon-props-col2 {
+  width: 50px; }

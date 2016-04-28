@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "90b6b86dccc294fe4953"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7182a4c378e8c56a5107"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -1738,7 +1738,7 @@
 	__webpack_require__(261);
 
 	// Images
-	var requireImgs = __webpack_require__(265);
+	var requireImgs = __webpack_require__(267);
 	requireImgs.keys().forEach(requireImgs);
 
 	// Setup App
@@ -21389,10 +21389,6 @@
 
 	var _history = __webpack_require__(255);
 
-	var _storesPokemonsListStore = __webpack_require__(251);
-
-	var _storesPokemonsListStore2 = _interopRequireDefault(_storesPokemonsListStore);
-
 	var history = (0, _history.createHashHistory)();
 
 	var Routes = (function (_React$Component) {
@@ -21414,7 +21410,7 @@
 						_reactRouter.Route,
 						{ path: '/', component: _LayoutJs2['default'] },
 						React.createElement(_reactRouter.IndexRoute, { component: _pagesHomePageJs2['default'] }),
-						React.createElement(_reactRouter.Route, { path: 'pokemon/:pokemonId', component: _pagesPokemonPageJs2['default'] }),
+						React.createElement(_reactRouter.Route, { path: '/:pokemonId,:pokemonPage', component: _pagesPokemonPageJs2['default'] }),
 						React.createElement(_reactRouter.Route, { path: '*', component: _pagesHomePageJs2['default'] })
 					)
 				);
@@ -21426,7 +21422,7 @@
 
 	exports['default'] = Routes;
 	module.exports = exports['default'];
-	/*<Router history={this.props.history}>*/ /* Default component for / path (Default pokedex pages) */ /* components={{ pokemonPage: pokemonsListStore.getCurrentPage() }} */ /* Detailed pokemon view */ /* You can render 404 page component here */
+	/*<Router history={this.props.history}>*/ /* Default component for / path (Default pokedex pages) */ /* Detailed pokemon view */ /* You can render 404 page component here */
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
 
 /***/ },
@@ -33158,21 +33154,25 @@
 /* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React) {"use strict";
+	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
+	Object.defineProperty(exports, '__esModule', {
 		value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(13);
+
+	var _react2 = _interopRequireDefault(_react);
 
 	var _componentsPokemonsList = __webpack_require__(226);
 
@@ -33184,28 +33184,25 @@
 		function HomePage() {
 			_classCallCheck(this, HomePage);
 
-			_get(Object.getPrototypeOf(HomePage.prototype), "constructor", this).apply(this, arguments);
+			_get(Object.getPrototypeOf(HomePage.prototype), 'constructor', this).apply(this, arguments);
 		}
 
 		_createClass(HomePage, [{
-			key: "render",
+			key: 'render',
 			value: function render() {
-				//console.log('HomePage render, pokemonPage', this.props.route.components.pokemonPage);
-				return React.createElement(
-					"div",
-					{ className: "container" },
-					React.createElement(_componentsPokemonsList2["default"], null)
+				return _react2['default'].createElement(
+					'div',
+					{ className: 'container' },
+					_react2['default'].createElement(_componentsPokemonsList2['default'], { paramPage: 0 })
 				);
 			}
 		}]);
 
 		return HomePage;
-	})(React.Component);
+	})(_react2['default'].Component);
 
-	exports["default"] = HomePage;
-	module.exports = exports["default"];
-	/* data-page={this.props.route.components.pokemonPage} */
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
+	exports['default'] = HomePage;
+	module.exports = exports['default'];
 
 /***/ },
 /* 226 */
@@ -33233,7 +33230,11 @@
 
 	var _fluxUtils = __webpack_require__(227);
 
-	var _Actions = __webpack_require__(245);
+	var _jquery = __webpack_require__(245);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Actions = __webpack_require__(246);
 
 	var _Actions2 = _interopRequireDefault(_Actions);
 
@@ -33256,22 +33257,52 @@
 	    _get(Object.getPrototypeOf(PokemonsListComponent.prototype), 'constructor', this).call(this, props);
 
 	    this.onClickNext = function (evt) {
-	      console.log('onClickNext', _this.state.page + 1);
+	      _this.hideRightPane();
 	      _Actions2['default'].getPokemonsList(_this.state.page + 1);
+	      (0, _jquery2['default'])(evt.target).blur();
 	    };
 
-	    this.onClickTest = function (evt) {
-	      console.log('onClickTest', _storesPokemonsListStore2['default'].getState());
-	      _Actions2['default'].getPokemonsList(0);
-	    };
-
-	    _Actions2['default'].getPokemonsList(0);
+	    _Actions2['default'].getPokemonsList(props.paramPage);
 	  }
 
 	  _createClass(PokemonsListComponent, [{
+	    key: 'showButtonReady',
+	    value: function showButtonReady() {
+	      (0, _jquery2['default'])('.button-disabled').hide();
+	      (0, _jquery2['default'])('.button').show();
+	    }
+	  }, {
+	    key: 'showButtonSpinner',
+	    value: function showButtonSpinner() {
+	      (0, _jquery2['default'])('.button').hide();
+	      (0, _jquery2['default'])('.button-disabled').show();
+	    }
+	  }, {
+	    key: 'hideRightPane',
+	    value: function hideRightPane() {
+	      (0, _jquery2['default'])('.rightpane').hide();
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      if (this.state.loading) {
+	        this.showButtonSpinner();
+	      } else {
+	        this.showButtonReady();
+	      }
+	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate() {
+	      if (this.state.loading) {
+	        this.showButtonSpinner();
+	      } else {
+	        this.showButtonReady();
+	      }
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      //console.log('render', this.state);
 	      var pokemonsList;
 	      if (this.state.pokemons.length) {
 	        pokemonsList = this.state.pokemons.map(function (pokemon, index) {
@@ -33281,7 +33312,7 @@
 	        pokemonsList = _react2['default'].createElement(
 	          'p',
 	          null,
-	          '...'
+	          'Loading...'
 	        );
 	      }
 	      return _react2['default'].createElement(
@@ -33294,8 +33325,13 @@
 	        ),
 	        _react2['default'].createElement(
 	          'button',
-	          { onClick: this.onClickNext },
+	          { className: 'button', onClick: this.onClickNext },
 	          'Load More'
+	        ),
+	        _react2['default'].createElement(
+	          'button',
+	          { className: 'button-disabled', style: { display: 'none' } },
+	          '   '
 	        )
 	      );
 	    }
@@ -33308,7 +33344,6 @@
 	    key: 'calculateState',
 	    value: function calculateState(prevState) {
 	      var s = _storesPokemonsListStore2['default'].getState();
-	      console.log('calculateState', prevState, s);
 	      return s;
 	    }
 	  }]);
@@ -35084,73 +35119,6 @@
 /* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	    value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	var _jquery = __webpack_require__(246);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _ActionTypes = __webpack_require__(247);
-
-	var _ActionTypes2 = _interopRequireDefault(_ActionTypes);
-
-	var _AppDispatcher = __webpack_require__(248);
-
-	var _AppDispatcher2 = _interopRequireDefault(_AppDispatcher);
-
-	var PokemonsList_URL = 'http://pokeapi.co/api/v1/pokemon/?limit=%limit%&offset=%offset%';
-	var PokemonsList_limit = 12;
-
-	var Actions = (function () {
-	    function Actions() {
-	        _classCallCheck(this, Actions);
-	    }
-
-	    _createClass(Actions, null, [{
-	        key: 'getPokemonsList',
-	        value: function getPokemonsList(n) {
-	            console.log('dispatch PokemonsListPending');
-	            _AppDispatcher2['default'].dispatch({ type: _ActionTypes2['default'].PokemonsListPending, page: n });
-	            /*var url = PokemonsList_URL.replace('%offset%', n*PokemonsList_limit).replace('%limit%', PokemonsList_limit);
-	            $.ajax(url, {
-	                method:'GET',
-	                dataType:'json'
-	            }).done(function(r) {
-	                console.log('dispatch PokemonsListDone');
-	                dispatcher.dispatch({ type: ActionTypes.PokemonsListDone, responce: r, page: n });
-	            }).fail(function(r) {
-	                dispatcher.dispatch({ type: ActionTypes.PokemonsListFail });
-	            });*/
-	        }
-	    }, {
-	        key: 'getPokemonDetails',
-	        value: function getPokemonDetails(id) {
-	            console.log('dispatch PokemonDetailsPending');
-	            _AppDispatcher2['default'].dispatch({ type: _ActionTypes2['default'].PokemonDetailsPending, id: id });
-	            //TODO: run ajax
-	        }
-	    }]);
-
-	    return Actions;
-	})();
-
-	exports['default'] = Actions;
-	module.exports = exports['default'];
-
-/***/ },
-/* 246 */
-/***/ function(module, exports, __webpack_require__) {
-
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	 * jQuery JavaScript Library v2.2.3
 	 * http://jquery.com/
@@ -36744,6 +36712,59 @@
 	if(!noGlobal){window.jQuery = window.$ = jQuery;}return jQuery;}); // Otherwise append directly
 
 /***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	    value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	var _jquery = __webpack_require__(245);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _ActionTypes = __webpack_require__(247);
+
+	var _ActionTypes2 = _interopRequireDefault(_ActionTypes);
+
+	var _AppDispatcher = __webpack_require__(248);
+
+	var _AppDispatcher2 = _interopRequireDefault(_AppDispatcher);
+
+	var Actions = (function () {
+	    function Actions() {
+	        _classCallCheck(this, Actions);
+	    }
+
+	    _createClass(Actions, null, [{
+	        key: 'getPokemonsList',
+	        value: function getPokemonsList(n) {
+	            //console.log('dispatch PokemonsListPending');
+	            _AppDispatcher2['default'].dispatch({ type: _ActionTypes2['default'].PokemonsListPending, page: n });
+	        }
+	    }, {
+	        key: 'getPokemonDetails',
+	        value: function getPokemonDetails(id) {
+	            //console.log('dispatch PokemonDetailsPending');
+	            _AppDispatcher2['default'].dispatch({ type: _ActionTypes2['default'].PokemonDetailsPending, id: id });
+	        }
+	    }]);
+
+	    return Actions;
+	})();
+
+	exports['default'] = Actions;
+	module.exports = exports['default'];
+
+/***/ },
 /* 247 */
 /***/ function(module, exports) {
 
@@ -37057,7 +37078,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _jquery = __webpack_require__(246);
+	var _jquery = __webpack_require__(245);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -37073,7 +37094,7 @@
 
 	var _url = 'http://pokeapi.co/api/v1/pokemon/?limit=%limit%&offset=%offset%';
 	var _limit = 12;
-	var _props = ['pkdx_id', 'name', 'attack', 'defense', 'hp', 'sp_atk', 'sp_def', 'speed', 'weight', 'types', 'moves']; //
+	var _props = ['pkdx_id', 'name', 'attack', 'defense', 'hp', 'sp_atk', 'sp_def', 'speed', 'weight', 'types', 'moves'];
 
 	var PokemonsListStore = (function (_ReduceStore) {
 	    _inherits(PokemonsListStore, _ReduceStore);
@@ -37087,7 +37108,7 @@
 	    _createClass(PokemonsListStore, [{
 	        key: 'getInitialState',
 	        value: function getInitialState() {
-	            return { page: 0, pokemons: [], loading: false, error: false };
+	            return { page: -1, pokemons: [], loading: false, error: false };
 	        }
 	    }, {
 	        key: 'getCurrentPage',
@@ -37097,30 +37118,31 @@
 	    }, {
 	        key: 'reduce',
 	        value: function reduce(state, payload) {
-	            console.log('reduce', state, payload);
 	            var newstate = _jquery2['default'].extend({}, state);
 	            switch (payload.type) {
+	                //set state 'pokemons loading'
 	                case _ActionTypes2['default'].PokemonsListPending:
-	                    //set state loading
-	                    //console.log('updating pokemons chunk...');
-	                    newstate.loading = true;
-	                    var url = _url.replace('%offset%', payload.page * _limit).replace('%limit%', _limit);
-	                    _jquery2['default'].ajax(url, {
-	                        method: 'GET',
-	                        dataType: 'json'
-	                    }).done(function (r) {
-	                        setTimeout(function () {
-	                            console.log('dispatch PokemonsListDone');
-	                            _AppDispatcher2['default'].dispatch({ type: _ActionTypes2['default'].PokemonsListDone, responce: r, page: payload.page });
-	                        }, 800);
-	                    }).fail(function (r) {
-	                        _AppDispatcher2['default'].dispatch({ type: _ActionTypes2['default'].PokemonsListFail, responce: r });
-	                    });
+	                    if (parseInt(state.page, 10) !== parseInt(payload.page)) {
+	                        newstate.loading = true;
+	                        var url = _url.replace('%offset%', payload.page * _limit).replace('%limit%', _limit);
+	                        _jquery2['default'].ajax(url, {
+	                            method: 'GET',
+	                            dataType: 'json',
+	                            crossDomain: true
+	                        }).done(function (r) {
+	                            setTimeout(function () {
+	                                _AppDispatcher2['default'].dispatch({ type: _ActionTypes2['default'].PokemonsListDone, responce: r, page: payload.page });
+	                            }, 800);
+	                        }).fail(function (r) {
+	                            setTimeout(function () {
+	                                _AppDispatcher2['default'].dispatch({ type: _ActionTypes2['default'].PokemonsListFail, responce: r });
+	                            }, 800);
+	                        });
+	                    }
 	                    break;
 
+	                //set state 'pokemons loaded'
 	                case _ActionTypes2['default'].PokemonsListDone:
-	                    //set state loading
-	                    //console.log('update pokemons chunk done', payload.page, payload.responce);
 	                    newstate.page = payload.page;
 	                    newstate.loading = false;
 	                    if ('undefined' !== typeof payload.responce.objects && _jquery2['default'].isArray(payload.responce.objects)) {
@@ -37147,29 +37169,33 @@
 	                    }
 	                    break;
 
+	                //set state 'pokemons load error'
 	                case _ActionTypes2['default'].PokemonsListFail:
 	                    newstate.loading = false;
 	                    newstate.pokemons = [];
 	                    newstate.error = true;
 	                    break;
 
+	                //set state 'pokemon details loading'
 	                case _ActionTypes2['default'].PokemonDetailsPending:
-	                    newstate.loading = true;
+	                    //newstate.loadingDetails = true;
+	                    newstate.pokemon = null;
 	                    for (var i = 0; i < state.pokemons.length; i++) {
-	                        if (state.pokemons[i].id == payload.id) {
+	                        if (state.pokemons[i].id === parseInt(payload.id, 10)) {
 	                            newstate.pokemon = state.pokemons[i];
+	                            break;
 	                        }
 	                    }
 	                    break;
 
+	                //set state 'pokemon details loaded', not really used
 	                case _ActionTypes2['default'].PokemonDetailsDone:
-	                    newstate.loading = true;
+	                    //newstate.loadingDetails = false;
 	                    break;
 
+	                //set state 'pokemon details load error', not really used
 	                case _ActionTypes2['default'].PokemonDetailsFail:
-	                    newstate.loading = false;
-	                    newstate.pokemons = [];
-	                    newstate.error = true;
+	                    //newstate.loadingDetails = false;
 	                    break;
 	            }
 	            return newstate;
@@ -37207,13 +37233,23 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Actions = __webpack_require__(245);
+	var _jquery = __webpack_require__(245);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Actions = __webpack_require__(246);
 
 	var _Actions2 = _interopRequireDefault(_Actions);
+
+	var _storesPokemonsListStore = __webpack_require__(251);
+
+	var _storesPokemonsListStore2 = _interopRequireDefault(_storesPokemonsListStore);
 
 	function ucFirst(string) {
 	  return string.substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
 	}
+
+	var _unlocked = false;
 
 	var PokemonListItem = (function (_React$Component) {
 	  _inherits(PokemonListItem, _React$Component);
@@ -37222,26 +37258,32 @@
 	    _classCallCheck(this, PokemonListItem);
 
 	    _get(Object.getPrototypeOf(PokemonListItem.prototype), 'constructor', this).apply(this, arguments);
+
+	    this.onClickDetails = function (evt) {
+	      if (_unlocked) {
+	        var id = (0, _jquery2['default'])(evt.currentTarget).attr('data-id');
+	        _Actions2['default'].getPokemonDetails(id);
+	        (0, _jquery2['default'])('.rightpane').show();
+	      } else _unlocked = true;
+	    };
 	  }
 
 	  _createClass(PokemonListItem, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      (0, _jquery2['default'])('img').load(function () {
+	        (0, _jquery2['default'])(this).parent('.pokemon-no-img').removeClass('pokemon-no-img');
+	      });
+	    }
+	  }, {
 	    key: 'render',
-
-	    /*constructor(props) {
-	      super(props);
-	    }*/
-
-	    /*onClickDetails = evt => {
-	      console.log(evt.target);
-	    }*/
-
 	    value: function render() {
 	      return _react2['default'].createElement(
 	        'a',
-	        { href: '#pokemon/' + this.props.pokemon.id, className: 'pokemon-list-node', key: 'pokemon-node-' + this.props.key, onClick: this.onClickDetails },
+	        { href: '#/' + this.props.pokemon.id + ',' + _storesPokemonsListStore2['default'].getCurrentPage(), className: 'pokemon-list-node', 'data-id': this.props.pokemon.id, key: 'pokemon-node-' + this.props.key, onClick: this.onClickDetails },
 	        _react2['default'].createElement(
 	          'div',
-	          { className: 'pokemon-img' },
+	          { className: 'pokemon-img pokemon-no-img' },
 	          _react2['default'].createElement('img', { src: 'http://pokeapi.co/media/img/' + this.props.pokemon.id + '.png' })
 	        ),
 	        _react2['default'].createElement(
@@ -37274,7 +37316,7 @@
 /* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(React) {'use strict';
+	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
 		value: true
@@ -37290,6 +37332,10 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var _react = __webpack_require__(13);
+
+	var _react2 = _interopRequireDefault(_react);
+
 	var _componentsPokemonsList = __webpack_require__(226);
 
 	var _componentsPokemonsList2 = _interopRequireDefault(_componentsPokemonsList);
@@ -37301,44 +37347,41 @@
 	var PokemonPage = (function (_React$Component) {
 		_inherits(PokemonPage, _React$Component);
 
-		function PokemonPage() {
+		function PokemonPage(props) {
 			_classCallCheck(this, PokemonPage);
 
-			_get(Object.getPrototypeOf(PokemonPage.prototype), 'constructor', this).apply(this, arguments);
+			_get(Object.getPrototypeOf(PokemonPage.prototype), 'constructor', this).call(this, props);
 		}
 
 		_createClass(PokemonPage, [{
 			key: 'render',
 			value: function render() {
-				//console.log('HomePage render, pokemonPage', this.props.route.components.pokemonPage);
-				return React.createElement(
+				return _react2['default'].createElement(
 					'div',
 					{ className: 'container2' },
-					React.createElement(
+					_react2['default'].createElement(
 						'div',
 						{ className: 'leftpane' },
-						React.createElement(
+						_react2['default'].createElement(
 							'div',
 							{ className: 'container' },
-							React.createElement(_componentsPokemonsList2['default'], null)
+							_react2['default'].createElement(_componentsPokemonsList2['default'], { paramPage: this.props.params.pokemonPage })
 						)
 					),
-					React.createElement(
+					_react2['default'].createElement(
 						'div',
 						{ className: 'rightpane' },
-						React.createElement(_componentsPokemonDetails2['default'], { 'data-id': '0' })
+						_react2['default'].createElement(_componentsPokemonDetails2['default'], { paramId: this.props.params.pokemonId })
 					)
 				);
 			}
 		}]);
 
 		return PokemonPage;
-	})(React.Component);
+	})(_react2['default'].Component);
 
 	exports['default'] = PokemonPage;
 	module.exports = exports['default'];
-	/* data-page={this.props.route.components.pokemonPage} */
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(13)))
 
 /***/ },
 /* 254 */
@@ -37364,23 +37407,38 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Actions = __webpack_require__(245);
+	var _fluxUtils = __webpack_require__(227);
+
+	var _jquery = __webpack_require__(245);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Actions = __webpack_require__(246);
 
 	var _Actions2 = _interopRequireDefault(_Actions);
 
-	var PokemonDetails = (function (_React$Component) {
-	  _inherits(PokemonDetails, _React$Component);
+	var _storesPokemonsListStore = __webpack_require__(251);
 
-	  function PokemonDetails(props) {
-	    _classCallCheck(this, PokemonDetails);
+	var _storesPokemonsListStore2 = _interopRequireDefault(_storesPokemonsListStore);
 
-	    console.log('PokemonDetails constructor', props);
-	    _get(Object.getPrototypeOf(PokemonDetails.prototype), 'constructor', this).call(this, props);
-	    //Actions.getPokemonDetails(props.pokeminId)
+	var PokemonDetailsComponent = (function (_Component) {
+	  _inherits(PokemonDetailsComponent, _Component);
+
+	  function PokemonDetailsComponent(props) {
+	    _classCallCheck(this, PokemonDetailsComponent);
+
+	    _get(Object.getPrototypeOf(PokemonDetailsComponent.prototype), 'constructor', this).call(this, props);
+	    _Actions2['default'].getPokemonDetails(props.paramId);
 	  }
 
-	  _createClass(PokemonDetails, [{
+	  _createClass(PokemonDetailsComponent, [{
 	    key: 'render',
+
+	    /*shouldComponentUpdate(nextProps, nextState) {
+	      console.log('PokemonDetailsComponent shouldComponentUpdate', nextProps, nextState);
+	      return true;
+	    }*/
+
 	    value: function render() {
 	      return _react2['default'].createElement(
 	        'div',
@@ -37388,12 +37446,12 @@
 	        _react2['default'].createElement(
 	          'div',
 	          { className: 'pokemon-name' },
-	          this.props.pokemon.name
+	          this.state.pokemon.name
 	        ),
 	        _react2['default'].createElement(
 	          'div',
 	          { className: 'pokemon-img' },
-	          _react2['default'].createElement('img', { src: 'http://pokeapi.co/media/img/' + this.props.pokemon.id + '.png' })
+	          _react2['default'].createElement('img', { src: 'http://pokeapi.co/media/img/' + this.state.pokemon.id + '.png' })
 	        ),
 	        _react2['default'].createElement(
 	          'table',
@@ -37406,12 +37464,12 @@
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col1' },
 	                'Type'
 	              ),
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col2' },
 	                'Fire'
 	              )
 	            ),
@@ -37420,93 +37478,136 @@
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col1' },
 	                'Attack'
 	              ),
-	              _react2['default'].createElement('td', null)
+	              _react2['default'].createElement(
+	                'td',
+	                { className: 'pokemon-props-col2' },
+	                this.state.pokemon.attack
+	              )
 	            ),
 	            _react2['default'].createElement(
 	              'tr',
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col1' },
 	                'Defense'
 	              ),
-	              _react2['default'].createElement('td', null)
+	              _react2['default'].createElement(
+	                'td',
+	                { className: 'pokemon-props-col2' },
+	                this.state.pokemon.defense
+	              )
 	            ),
 	            _react2['default'].createElement(
 	              'tr',
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col1' },
 	                'HP'
 	              ),
-	              _react2['default'].createElement('td', null)
+	              _react2['default'].createElement(
+	                'td',
+	                { className: 'pokemon-props-col2' },
+	                this.state.pokemon.hp
+	              )
 	            ),
 	            _react2['default'].createElement(
 	              'tr',
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col1' },
 	                'SP Attack'
 	              ),
-	              _react2['default'].createElement('td', null)
+	              _react2['default'].createElement(
+	                'td',
+	                { className: 'pokemon-props-col2' },
+	                this.state.pokemon.sp_atk
+	              )
 	            ),
 	            _react2['default'].createElement(
 	              'tr',
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col1' },
 	                'SP Defence'
 	              ),
-	              _react2['default'].createElement('td', null)
+	              _react2['default'].createElement(
+	                'td',
+	                { className: 'pokemon-props-col2' },
+	                this.state.pokemon.sp_def
+	              )
 	            ),
 	            _react2['default'].createElement(
 	              'tr',
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col1' },
 	                'Speed'
 	              ),
-	              _react2['default'].createElement('td', null)
+	              _react2['default'].createElement(
+	                'td',
+	                { className: 'pokemon-props-col2' },
+	                this.state.pokemon.speed
+	              )
 	            ),
 	            _react2['default'].createElement(
 	              'tr',
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col1' },
 	                'Weight'
 	              ),
-	              _react2['default'].createElement('td', null)
+	              _react2['default'].createElement(
+	                'td',
+	                { className: 'pokemon-props-col2' },
+	                this.state.pokemon.attack
+	              )
 	            ),
 	            _react2['default'].createElement(
 	              'tr',
 	              null,
 	              _react2['default'].createElement(
 	                'td',
-	                null,
+	                { className: 'pokemon-props-col1' },
 	                'Total moves'
 	              ),
-	              _react2['default'].createElement('td', null)
+	              _react2['default'].createElement(
+	                'td',
+	                { className: 'pokemon-props-col2' },
+	                this.state.pokemon.moves
+	              )
 	            )
 	          )
 	        )
 	      );
 	    }
+	  }], [{
+	    key: 'getStores',
+	    value: function getStores() {
+	      return [_storesPokemonsListStore2['default']];
+	    }
+	  }, {
+	    key: 'calculateState',
+	    value: function calculateState(prevState) {
+	      var s = _storesPokemonsListStore2['default'].getState();
+	      return s;
+	    }
 	  }]);
 
-	  return PokemonDetails;
-	})(_react2['default'].Component);
+	  return PokemonDetailsComponent;
+	})(_react.Component);
 
+	var PokemonDetails = _fluxUtils.Container.create(PokemonDetailsComponent);
 	exports['default'] = PokemonDetails;
 	module.exports = exports['default'];
-	/*this.props.pokemon.attack*/ /*this.props.pokemon.defense*/ /*this.props.pokemon.hp*/ /*this.props.pokemon.sp_atk*/ /*this.props.pokemon.sp_def*/ /*this.props.pokemon.speed*/ /*this.props.pokemon.attack*/ /*this.props.pokemon.moves*/
 
 /***/ },
 /* 255 */
@@ -37968,11 +38069,13 @@
 /* 262 */,
 /* 263 */,
 /* 264 */,
-/* 265 */
+/* 265 */,
+/* 266 */,
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./bg-empty.png": 266
+		"./bg-empty.png": 268
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -37985,11 +38088,11 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 265;
+	webpackContext.id = 267;
 
 
 /***/ },
-/* 266 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "bg-empty.png?b2138e4cbb8b082c0b0563feb33d7bfe";
